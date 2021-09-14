@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("Ingrese la cadena")
 	fmt.Scanf("%s\n", &c)
 	r, err := s.GenerateString(c)
-	if r == nil {
+	if err != nil {
 		fmt.Println(err)
 	} else {
 		fmt.Println(r)
