@@ -20,6 +20,7 @@ func TestString(t *testing.T) {
 		//{"NN04000A", false, "", "", 0},
 		//{"NN04000A", true, "", "", 0},
 		//{"NN04000A", true, "NN", "", 4},
+		//{"NN04000A", true, "NN", "000A", 4},
 	}
 
 	for _, testData := range cases {
