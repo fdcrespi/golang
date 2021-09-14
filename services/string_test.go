@@ -18,6 +18,8 @@ func TestString(t *testing.T) {
 		{"NN100987654321", true, "NN", "0987654321", 10},
 		{"TX06ABCDE", false, "", "", 0},
 		//{"NN04000A", false, "", "", 0},
+		//{"NN04000A", true, "", "", 0},
+		//{"NN04000A", true, "NN", "", 4},
 	}
 
 	for _, testData := range cases {
@@ -25,7 +27,6 @@ func TestString(t *testing.T) {
 		r, err := s.ParseString(testData.Input)
 		// acá agregar chequeos propios del test por ejemplo:
 		assert.Equal(t, err == nil, testData.Success)
-		//assert.Equal(t, r.Length == testData.Length, testData.Success)
 		if testData.Success {
 			assert.Equal(t, testData.Type, r.Type)
 			assert.Equal(t, testData.Value, r.Value)
