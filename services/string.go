@@ -23,7 +23,7 @@ func (r *Result) ParseString(c string) (*Result, error) {
 		if r.Length == len(r.Value) {
 			return r, nil
 		}
-		return nil, errors.New("La longitud indicada no coincide con la de la cadena")
+		return nil, errors.New("La longitud indicada es incorrecta")
 	}
 	return nil, errors.New("Formato de cadena invalido")
 }
