@@ -27,7 +27,7 @@ func TestString(t *testing.T) {
 		r, err := s.ParseString(testData.Input)
 		// acá agregar chequeos propios del test por ejemplo:
 		assert.Equal(t, err == nil, testData.Success)
-		if testData.Success {
+		if r != nil {
 			assert.Equal(t, testData.Type, r.Type)
 			assert.Equal(t, testData.Value, r.Value)
 			assert.Equal(t, testData.Length, r.Length)
