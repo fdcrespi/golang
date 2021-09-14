@@ -22,9 +22,14 @@ func TestString(t *testing.T) {
 
 	for _, testData := range cases {
 		var s Result
-		_, err := s.ParseString(testData.Input)
+		r, err := s.ParseString(testData.Input)
 		// acá agregar chequeos propios del test por ejemplo:
 		assert.Equal(t, err == nil, testData.Success)
 		//assert.Equal(t, r.Length == testData.Length, testData.Success)
+		if testData.Success {
+			assert.Equal(t, testData.Type, r.Type)
+			assert.Equal(t, testData.Value, r.Value)
+			assert.Equal(t, testData.Length, r.Length)
+		}
 	}
 }
