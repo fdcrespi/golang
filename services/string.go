@@ -6,7 +6,7 @@ import (
 )
 
 type FormatString interface {
-	GenerateString(c string) (*Result, error)
+	ParseString(c string) (*Result, error)
 }
 
 type Result struct {
@@ -15,7 +15,7 @@ type Result struct {
 	Length int
 }
 
-func (r *Result) GenerateString(c string) (*Result, error) {
+func (r *Result) ParseString(c string) (*Result, error) {
 	if len(c) > 4 {
 		r.Type = c[0:2]
 		r.Length, _ = strconv.Atoi(c[2:4])

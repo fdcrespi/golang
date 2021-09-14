@@ -7,13 +7,14 @@ import (
 
 func main() {
 	var s services.Result
+	/* c := "TX08ABC" */
 	var c string
-	//c := "TX08ABC"
 	fmt.Println("Ingrese la cadena")
 	fmt.Scanf("%s\n", &c)
-	r, err := s.GenerateString(c)
+	r, err := s.ParseString(c)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Print("Error: ")
+		fmt.Print(err)
 	} else {
 		fmt.Println(r)
 	}
