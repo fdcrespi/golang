@@ -15,7 +15,6 @@ func main() {
 	if err != nil {
 		fmt.Print("Error: ")
 		fmt.Println(err)
-
 	}
 	fmt.Println(sf)
 }
