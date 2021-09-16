@@ -5,17 +5,17 @@ import (
 	"strconv"
 )
 
-type FormatString interface {
+/* type FormatString interface {
 	ParseString(c string) (*Result, error)
-}
+}*/
 
-type Result struct {
+type StringFormat struct {
 	Type   string
 	Value  string
 	Length int
 }
 
-func (r *Result) ParseString(c string) (*Result, error) {
+func (r *StringFormat) ParseString(c string) (*StringFormat, error) {
 	if len(c) > 4 {
 		r.Type = c[0:2]
 		r.Length, _ = strconv.Atoi(c[2:4])
@@ -23,7 +23,7 @@ func (r *Result) ParseString(c string) (*Result, error) {
 		if r.Length == len(r.Value) {
 			return r, nil
 		}
-		return nil, errors.New("La longitud indicada es incorrecta")
+		return nil, errors.New("la longitud indicada es incorrecta")
 	}
-	return nil, errors.New("Formato de cadena invalido")
+	return nil, errors.New("formato de cadena invalido")
 }

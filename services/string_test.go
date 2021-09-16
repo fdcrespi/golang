@@ -24,7 +24,7 @@ func TestString(t *testing.T) {
 	}
 
 	for _, testData := range cases {
-		var s Result
+		var s StringFormat
 		r, err := s.ParseString(testData.Input)
 		// acá agregar chequeos propios del test por ejemplo:
 		assert.Equal(t, err == nil, testData.Success)
