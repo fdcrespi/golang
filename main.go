@@ -14,8 +14,8 @@ func main() {
 	sf, err := s.ParseString(c)
 	if err != nil {
 		fmt.Print("Error: ")
-		fmt.Print(err)
-	} else {
-		fmt.Println(sf)
+		fmt.Println(err)
+
 	}
+	fmt.Println(sf)
 }
