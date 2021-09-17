@@ -16,8 +16,12 @@ func TestString(t *testing.T) {
 	}{
 		{"TX02AB", true, "TX", "AB", 2},
 		{"NN100987654321", true, "NN", "0987654321", 10},
+		{"TX03514", true, "TX", "514", 3},
 		{"TX06ABCDE", false, "", "", 0},
 		{"NN04000A", false, "", "", 0},
+		{"NN031234", false, "", "", 0},
+		{"CX08FEDERICO", false, "", "", 0},
+		{"NN00", false, "", "", 0},
 	}
 
 	for _, testData := range cases {

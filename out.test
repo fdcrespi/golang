@@ -1,11 +1,11 @@
 mode: set
 tudai21/services/string.go:14.69,15.16 1 1
-tudai21/services/string.go:33.2,33.75 1 0
+tudai21/services/string.go:33.2,33.75 1 1
 tudai21/services/string.go:15.16,19.39 4 1
 tudai21/services/string.go:22.3,22.21 1 1
 tudai21/services/string.go:28.3,28.31 1 1
 tudai21/services/string.go:31.3,31.84 1 1
-tudai21/services/string.go:19.39,21.4 1 0
+tudai21/services/string.go:19.39,21.4 1 1
 tudai21/services/string.go:22.21,24.18 2 1
 tudai21/services/string.go:24.18,26.5 1 1
 tudai21/services/string.go:28.31,30.4 1 1

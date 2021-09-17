@@ -55,7 +55,7 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">tudai21/services/string.go (85.7%)</option>
+				<option value="file0">tudai21/services/string.go (100.0%)</option>
 				
 				</select>
 			</div>
@@ -87,7 +87,7 @@ func (r *StringFormat) ParseString(c string) (*StringFormat, error) <span class=
                 r.Type = c[0:2]
                 r.Length, _ = strconv.Atoi(c[2:4])
                 r.Value = c[4:]
-                if r.Type != "NN" &amp;&amp; r.Type != "TX" </span><span class="cov0" title="0">{
+                if r.Type != "NN" &amp;&amp; r.Type != "TX" </span><span class="cov8" title="1">{
                         return &amp;StringFormat{"", "", 0}, errors.New("el formato indicado es invalido")
                 }</span>
                 <span class="cov8" title="1">if r.Type == "NN" </span><span class="cov8" title="1">{
@@ -101,7 +101,7 @@ func (r *StringFormat) ParseString(c string) (*StringFormat, error) <span class=
                 }</span>
                 <span class="cov8" title="1">return &amp;StringFormat{"", "", 0}, errors.New("la longitud indicada es incorrecta")</span>
         }
-        <span class="cov0" title="0">return &amp;StringFormat{"", "", 0}, errors.New("formato de cadena invalido")</span>
+        <span class="cov8" title="1">return &amp;StringFormat{"", "", 0}, errors.New("formato de cadena invalido")</span>
 }
 </pre>
 		
